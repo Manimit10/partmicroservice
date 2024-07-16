@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Create Order
+  body
+    h1 Create Order
+    form(action="/api/orders", method="post")
+      label(for="customerName") Customer Name:
+      input(type="text", name="customerName", id="customerName")
+      br
+      label(for="product") Product:
+      input(type="text", name="product", id="product")
+      br
+      label(for="quantity") Quantity:
+      input(type="number", name="quantity", id="quantity")
+      br
+      button(type="submit") Create Order

@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title All Orders
+  body
+    h1 All Orders
+    if orders.length
+      table
+        thead
+          tr
+            th Order ID
+            th Customer Name
+            th Product
+            th Quantity
+        tbody
+          each order in orders
+            tr
+              td #{order.id}
+              td #{order.customerName}
+              td #{order.product}
+              td #{order.quantity}
+    else
+      p No orders found
