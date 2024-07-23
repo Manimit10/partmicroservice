@@ -9,7 +9,7 @@ app.post('/events', async (req, res) => {
   const { type, data } = req.body;
 
   if (type === 'QualityAdded') {
-    const status = data.content.includes('orange') ? 'rejected' : 'approved';
+    const status = data.content.includes('bad') ? 'rejected' : 'approved';
     console.log('Maaani')
     // to do: if the rating of data.rating is less than 2 === rejected
 
