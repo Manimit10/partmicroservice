@@ -3,15 +3,9 @@ html
   head
     title Create Order
   body
-    h1 Create Order
-    form(action="/api/orders", method="post")
-      label(for="customerName") Customer Name:
-      input(type="text", name="customerName", id="customerName")
-      br
-      label(for="product") Product:
-      input(type="text", name="product", id="product")
-      br
-      label(for="quantity") Quantity:
-      input(type="number", name="quantity", id="quantity")
-      br
+    h1 Create a New Order
+    form(action="/order/create" method="POST")
+      div
+        label(for="items") Items:
+        input(type="text" name="items" placeholder="Enter items separated by commas" required)
       button(type="submit") Create Order

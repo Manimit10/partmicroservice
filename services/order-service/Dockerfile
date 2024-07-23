@@ -6,10 +6,14 @@ COPY package*.json ./
 
 RUN npm install
 
+COPY prisma ./prisma/
+
 COPY . .
 
 RUN npx prisma generate
 
-EXPOSE 3000
+# EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+CMD ["sh", "-c", "npx prisma migrate deploy && npm start"]
+
+# CMD ["npm", "run", "dev"]
